@@ -1,0 +1,92 @@
+   #include<iostream.h>
+   #include<conio.h>
+   class Distance
+   {
+      private:
+	   int feet,inch;
+      public:
+	   Distance ():feet(0),inch(0) {}
+	   Distance (int f, int in):feet(f),inch(in) {}
+	   void getdist()
+	   {
+	     cout<<"Enter value for feet:";
+	     cin>>feet;
+	     cout<<"Enter value for inch:";
+	     cin>>inch;
+	   }
+
+	   void showdist()
+	   {
+	     cout<<feet<<"\t"<<inch<<endl;
+	   }
+	   void sub_dist(Distance,Distance);
+      };
+	  void Distance::sub_dist(Distance D2,Distance D3)
+
+
+     {
+	  inch=D2.inch-D3.inch;
+	  feet=0;
+	  feet -=D2.feet-D3.feet;
+      }
+
+	  int main()
+
+   {       clrscr();
+
+	  Distance Dist1,Dist3;
+	  Dist1.showdist();
+
+	  Dist3.showdist();
+	  Distance Dist2(20,10);
+
+	  Dist1.getdist();
+	  Dist2.showdist();
+	  Dist3.sub_dist(Dist1,Dist2);
+
+	  cout<<"\nEnter first distance";
+
+	  Dist1.showdist();
+
+	  cout<<"\nEnter second distance";
+
+	  Dist2.showdist();
+	  cout<<"\nEnter third distance:";
+
+
+
+	  cout<<"total Distance:"<<endl;
+
+
+	  Distance dist1,dist3;
+
+	  dist1.showdist();
+	  dist3.showdist();
+
+	Distance dist2(20,10);
+
+	  dist1.getdist();
+	  dist2.showdist();
+
+       Dist3.sub_dist(Dist1,Dist2);
+
+	  cout<<"\ndist1=";
+	  Dist1.showdist();
+
+	  cout<<"\ndist2=";
+	  Dist2.showdist();
+
+	  cout<<"\ndist3=";
+	  Dist3.showdist();
+	  cout << endl;
+	  getche();
+	  return 0;
+
+   }
+
+
+
+
+
+
+
